@@ -1,0 +1,12 @@
+<!--
+interface Forecast {
+  date: string;
+  temperatureC: number;
+  temperatureF: number;
+  summary: string;
+}
+-->
+<div>
+    <h2>{{date | date: 'fullDate'}}</h2>
+    <div><fa [name]="icon()"></fa>{{temperature}} &#176;F</div>
+</div>

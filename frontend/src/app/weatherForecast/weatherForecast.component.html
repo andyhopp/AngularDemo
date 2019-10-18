@@ -1,0 +1,10 @@
+<div>
+    <ul>
+        <li *ngFor="let forecast of fiveDayForecast as forecasts; index as i; first as isFirst">
+            <app-forecast-report
+                [date]="forecast.date"
+                [temperature]="forecast.temperatureF"
+                [summary]="forecast.summary"></app-forecast-report>
+        </li>
+    </ul>
+</div>

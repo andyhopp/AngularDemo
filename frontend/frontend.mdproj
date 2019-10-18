@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ItemType>GenericProject</ItemType>
+    <ProjectGuid>{0A93B7A4-8255-44B9-8236-BDD0483E0222}</ProjectGuid>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Default|AnyCPU' ">
+    <OutputPath>.\</OutputPath>
+    <CustomCommands>
+      <CustomCommands>
+        <Command>
+          <type>Build</type>
+          <command>ng build</command>
+        </Command>
+      </CustomCommands>
+    </CustomCommands>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include="e2e\**\*" />
+    <None Include="src\**\*" />
+    <None Include="browserslist" />
+    <None Include="tsconfig.app.json" />
+    <None Include="README.md" />
+    <None Include="angular.json" />
+    <None Include="package-lock.json" />
+    <None Include="package.json" />
+    <None Include="tslint.json" />
+    <None Include="karma.conf.js" />
+    <None Include="tsconfig.json" />
+    <None Include="frontend.mdproj" />
+    <None Include="tsconfig.spec.json" />
+  </ItemGroup>
+</Project>
