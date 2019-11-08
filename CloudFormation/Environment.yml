@@ -256,12 +256,23 @@ Resources:
               OriginProtocolPolicy: http-only
         DefaultRootObject: index.html
         CacheBehaviors:
-          - ForwardedValues:
+          - Compress: true
+            ForwardedValues:
               QueryString: true
             PathPattern: api/*
             TargetOriginId: dynamiccontent
             ViewerProtocolPolicy: redirect-to-https
+        CustomErrorResponses: # Necesary to support Angular SPA Routing
+          - ErrorCode: 403
+            ErrorCachingMinTTL: 86400
+            ResponseCode: 200
+            ResponsePagePath: /index.html
+          - ErrorCode: 404
+            ErrorCachingMinTTL: 86400
+            ResponseCode: 200
+            ResponsePagePath: /index.html
         DefaultCacheBehavior:
+          Compress: true
           ForwardedValues:
             QueryString: false
           TargetOriginId: staticcontent
